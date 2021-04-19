@@ -53,4 +53,10 @@ export class CarsRepository implements ICarsRepository {
 
     return returnedCars;
   }
+
+  async deleteCarById (car_id: string): Promise<void> {
+    await this.repository.delete({
+      id: car_id
+    })
+  }
 }

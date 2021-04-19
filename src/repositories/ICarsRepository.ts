@@ -5,4 +5,5 @@ export interface ICarsRepository {
   create: (data: ICreateCarsDTO) => Promise<Cars>;
   findByLicensePlate: (license_plate : string) => Promise<Boolean> ;
   listCarByColor: (color: string) => Promise<Cars[]>;
+  deleteCarById: (car_id : string) => Promise<void>;
 }
